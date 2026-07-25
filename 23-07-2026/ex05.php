@@ -21,6 +21,7 @@
             ];
 
             $produtoBuscado = 'Cadeira';
+            $produtoEncontrado = false;
 
             foreach ($catalogo as $categoria => $produtos) {
                 if ($produtoEncontrado) {
@@ -29,17 +30,20 @@
 
                 echo "<h3> Buscando na categoria: $categoria</h3>";
 
-            foreach ($produtos as $produto) {
-                echo "Checando item: $produto<br>";
+                foreach ($produtos as $produto) {
+                    echo "Checando item: $produto<br>";
 
-                if ($produto === $produtoBuscado) {
-                    echo "<p> <strong> \u{1F3AF} Produto '$produto'
-                encontrado!";
-
-                    return;
+                    if ($produto === $produtoBuscado) {
+                        echo "<p><strong> \u{1F3AF} Produto '$produto' encontrado!</strong></p>";
+                        $produtoEncontrado = true;
+                        break;
+                    }
                 }
             }
-        }
+
+            if (!$produtoEncontrado) {
+                echo "<p>Produto não encontrado.</p>";
+            }
             ?>
         </div>
     </main>
