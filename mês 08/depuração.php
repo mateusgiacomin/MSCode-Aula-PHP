@@ -34,7 +34,7 @@
                     }
 
                 $textoFormatado = implode (" | ", $listaSkills);
-                echo "Trilha do aluno>: $textoFormatado";
+                echo "Trilha do aluno: $textoFormatado";
                 ?>
             </div>
 
