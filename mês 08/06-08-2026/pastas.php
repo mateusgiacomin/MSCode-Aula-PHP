@@ -52,7 +52,7 @@
                 }
                 echo "</ul>";
             }
-            echo "<h3> Explorador de arqyvuis MS CODE</h3>";
+            echo "<h3> Explorador de arquivos MS CODE</h3>";
             explorarPastas($meuComputador);
 
             ?>
